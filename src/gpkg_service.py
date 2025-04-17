@@ -15,9 +15,11 @@ def list_gpkg_files(directory: Path):
     """Return a list of .gpkg files in the specified directory."""
     return list(directory.glob("*.gpkg"))
 
+
 def list_gpkg_layers(gpkg_path: Path):
     """Return a list of layer names in the specified GPKG file."""
     return fiona.listlayers(gpkg_path)
+
 
 def load_gpkg_layer(gpkg_path: Path, layer: str):
     """Load a specific layer from a GPKG file."""
